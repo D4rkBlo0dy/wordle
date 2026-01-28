@@ -42,3 +42,17 @@ while intentos < intentos_maximos:
     print("\nResultado:")
     print(" ".join(resultado))
     print("\n-----------------\n")
+
+#Por ultimo, ingresamos el if para que rompa el bucle al ganar
+
+    if palabra_ingresada == palabra_secreta:
+        #Se cambia el valor de gano a true para que se rompa el bucle
+        gano = True
+        print(" ¡Ganaste!")
+        break
+
+    intentos += 1
+
+# y cuando se terminan los intentos
+if not gano:
+    print(f" Te quedaste sin intentos. La palabra era: {palabra_secreta}")
